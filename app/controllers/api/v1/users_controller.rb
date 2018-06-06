@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
 
 
   def create
-    @user = User.find_by(username: params["username"])
+    @user = User.create(username: params["username"], password: params["password"])
     if (@user && @user.authenticate(params["password"]))
       render json: token_json(@user)
     else
