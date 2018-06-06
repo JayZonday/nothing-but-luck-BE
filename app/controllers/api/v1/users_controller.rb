@@ -5,14 +5,18 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
+
   def create
-    @user = User.create(user_params)
-    if @user.save
-      render json: @user
+    @user = User.find_by(username: params["username"])
+    if (@user && @user.authenticate(params["password"]))
+      render json: token_json(@user)
     else
-      render json: @user.errors
+      render json: {
+        errors: "Those credentials don't match anything we have in our database"
+      }, status: :unauthorized
     end
   end
+
 
   def update
     @user = User.find(params[:id])
