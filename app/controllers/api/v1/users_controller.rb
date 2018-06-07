@@ -12,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
       render json: token_json(@user)
     else
       render json: {
-        errors: "Those credentials don't match anything we have in our database"
+        errors: "Those credentials are invalid"
       }, status: :unauthorized
     end
   end

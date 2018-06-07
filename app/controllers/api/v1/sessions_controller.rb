@@ -6,7 +6,7 @@ class Api::V1::SessionsController < ApplicationController
       render json: token_json(@user)
     else
       render json: {
-        errors: "You shall not pass"
+        errors: "You are unauthorized!!!"
       }, status: :unauthorized
     end
   end
