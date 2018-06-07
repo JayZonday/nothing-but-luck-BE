@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @post = Post.create(post_params)
     if @post.save
       render json: @post
     else
@@ -31,7 +31,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :user_id)
   end
 
 end
