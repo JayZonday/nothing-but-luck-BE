@@ -24,6 +24,11 @@ class Api::V1::PostsController < ApplicationController
     end
   end
 
+  def show
+    @post = Post.find(params[:id])
+    render json: @post
+  end
+
   def destroy
     Post.destroy(params[:id])
   end
