@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :posts
       resources :favorites
       post '/sessions/', to: 'sessions#create'
+      post '/users/', to: 'users#create'
     end
   end
 end
