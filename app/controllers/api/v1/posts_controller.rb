@@ -6,7 +6,7 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(title: post_params["title"], body: post_params["body"], user_id: post_params["user_id"])
+    @post = Post.create(title: post_params["title"], body: post_params["body"], user_id: 1)
     if @post.save
       render json: @post
     else
