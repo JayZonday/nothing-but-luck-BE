@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user1 = User.create(username: 'Test', password:'Test')
 
-post1 = Post.create(title: 'test', body: 'testing posts', user_id: 1)
+post1 = Post.create(title: 'test', league:"NBA", body: 'testing posts', user_id: 1)
 
 favorites = Favorite.create(user_id: 1, post_id: 1)

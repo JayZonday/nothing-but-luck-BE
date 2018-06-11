@@ -3,6 +3,7 @@ class CreatePosts< ActiveRecord::Migration[5.1]
     create_table :posts do |t|
       t.string :title
       t.string :body
+      t.string :league
       t.integer :user_id
       t.timestamps
     end
