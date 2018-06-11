@@ -1,12 +1,11 @@
 class Api::V1::PostsController < ApplicationController
-
   def index
     @posts = Post.all
     render json: @posts
   end
 
   def create
-    @post = Post.create(title: post_params["title"], body: post_params["body"], user_id: 1)
+    @post = Post.create(post_params)
     if @post.save
       render json: @post
     else
