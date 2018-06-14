@@ -4,6 +4,12 @@ class ApplicationController < ActionController::API
     {
       username: user.username,
       user_id: user.id,
+      motto: user.motto,
+      email: user.email,
+      name: user.name,
+      favsport: user.favsport,
+      profurl: user.profurl,
+      bgurl: user.bgurl,
       token: generate_token(user)
     }
   end
