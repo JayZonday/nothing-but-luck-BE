@@ -8,6 +8,7 @@
 user1 = User.create(
   username: 'Test',
   password:"test",
+  motto: "I Test Non-Stop!",
   email:"test@test.com",
   name:"Test Tester",
   favsport:"Testing",
@@ -16,6 +17,7 @@ user1 = User.create(
 user2 = User.create(
   username: 'JayZonday',
   password:"123",
+  motto: "too legit to quit",
   email:"jmoloughney25@gmail.com",
   name:"Joe Moloughney",
   favsport:"Basketball",
