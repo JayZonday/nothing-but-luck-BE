@@ -5,8 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create(username: 'Test', password:'Test')
-user2 = User.create(username: 'JayZonday', password:"123")
+user1 = User.create(
+  username: 'Test',
+  password:"test",
+  email:"test@test.com",
+  name:"Test Tester",
+  favsport:"Testing",
+  profurl:"",
+  bgurl:"")
+user2 = User.create(
+  username: 'JayZonday',
+  password:"123",
+  email:"jmoloughney25@gmail.com",
+  name:"Joe Moloughney",
+  favsport:"Basketball",
+  profurl:"",
+  bgurl:"")
 post1 = Post.create(title: 'test', league:"NBA", body: 'testing posts', user_id: 1)
 
 favorites = Favorite.create(user_id: 1, post_id: 1)

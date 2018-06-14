@@ -3,6 +3,12 @@ class CreateUsers < ActiveRecord::Migration[5.1]
     create_table :users do |t|
       t.string :username
       t.string :password_digest
+      t.string :motto
+      t.string :email
+      t.string :name
+      t.string :favsport
+      t.string :profurl
+      t.string :bgurl
       t.timestamps
     end
   end

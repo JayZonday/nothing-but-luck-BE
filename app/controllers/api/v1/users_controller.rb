@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
 
 
   def create
-    @user = User.create(username: params["username"], password: params["password"])
+    @user = User.create(user_params)
     if (@user && @user.authenticate(params["password"]))
       render json: token_json(@user)
     else
@@ -40,7 +40,16 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(
+      :username,
+      :password,
+      :username,
+      :password,
+      :email,
+      :name,
+      :favsport,
+      :profurl,
+      :bgurl)
   end
 
 end
