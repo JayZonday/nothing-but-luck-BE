@@ -12,8 +12,8 @@ user1 = User.create(
   email:"test@test.com",
   name:"Test Tester",
   favsport:"Testing",
-  profurl:"",
-  bgurl:"")
+  profurl:"https://www.robot-advance.com/EN/ori-maze-breaker-black-silverlit-1885.jpg",
+  bgurl:"http://symphonyguildofwinterhaven.com/wp-content/uploads/Shamrocks.jpg")
 user2 = User.create(
   username: 'JayZonday',
   password:"123",
@@ -21,8 +21,8 @@ user2 = User.create(
   email:"jmoloughney25@gmail.com",
   name:"Joe Moloughney",
   favsport:"Basketball",
-  profurl:"",
-  bgurl:"")
+  profurl: 'http://i66.tinypic.com/212fi8k.jpg',
+  bgurl:"http://symphonyguildofwinterhaven.com/wp-content/uploads/Shamrocks.jpg")
 post1 = Post.create(title: 'test', league:"NBA", body: 'testing posts', user_id: 1)
 
 favorites = Favorite.create(user_id: 1, post_id: 1)
