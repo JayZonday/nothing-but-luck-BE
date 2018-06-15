@@ -10,6 +10,7 @@ class ApplicationController < ActionController::API
       favsport: user.favsport,
       profurl: user.profurl,
       bgurl: user.bgurl,
+      posts: user.posts,
       token: generate_token(user)
     }
   end
