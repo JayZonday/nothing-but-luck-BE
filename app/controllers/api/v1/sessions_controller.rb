@@ -21,4 +21,5 @@ class Api::V1::SessionsController < ApplicationController
       }, status: :unauthorized
     end
   end
+  
 end
