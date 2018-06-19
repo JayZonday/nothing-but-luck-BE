@@ -55,4 +55,6 @@ class ApplicationController < ActionController::API
     current_user_id == user.id
   end
 
+
+
 end

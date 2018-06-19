@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post '/sessions/', to: 'sessions#create'
       get '/sessions/:id', to: 'sessions#show'
       post '/users/', to: 'users#create'
+      mount ActionCable.server => '/cable'
     end
   end
 end
